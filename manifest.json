@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Pixiv User Muter",
+  "version": "1.0.0",
+  "description": "Pixivで特定のユーザーをミュートする拡張機能",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.pixiv.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.pixiv.net/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Pixiv User Muter"
+  }
+} 

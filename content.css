@@ -1,0 +1,7 @@
+.pixiv-user-muted {
+  display: none !important;
+}
+
+.pixiv-user-muted * {
+  display: none !important;
+} 

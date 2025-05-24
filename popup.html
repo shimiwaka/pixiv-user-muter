@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 380px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    .input-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    .button-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    button {
+      background-color: #0096fa;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      flex: 1;
+    }
+    
+    button:hover {
+      background-color: #0078d4;
+    }
+    
+    .unmute-btn {
+      background-color: #ff5722;
+    }
+    
+    .unmute-btn:hover {
+      background-color: #d84315;
+    }
+    
+    .muted-list {
+      margin-top: 20px;
+    }
+    
+    .muted-user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      border: 1px solid #eee;
+      margin-bottom: 5px;
+      border-radius: 4px;
+    }
+    
+    .user-info {
+      flex: 1;
+    }
+    
+    .user-id {
+      font-weight: bold;
+    }
+    
+    .user-name {
+      font-size: 12px;
+      color: #666;
+      margin-top: 2px;
+    }
+    
+    .remove-btn {
+      background-color: #d73527;
+      font-size: 12px;
+      padding: 4px 8px;
+      flex: none;
+    }
+    
+    .remove-btn:hover {
+      background-color: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pixiv User Muter</h1>
+  
+  <div class="input-group">
+    <label for="userId">ユーザーID:</label>
+    <input type="text" id="userId" placeholder="ミュートしたいユーザーIDを入力">
+  </div>
+  
+  <div class="input-group">
+    <label for="userInfo">ユーザー情報（任意）:</label>
+    <input type="text" id="userInfo" placeholder="ユーザー名など識別情報を入力">
+  </div>
+  
+  <div class="button-row">
+    <button id="muteBtn">ミュート追加</button>
+    <button id="unmuteBtn" class="unmute-btn">ミュート解除</button>
+  </div>
+  
+  <div class="muted-list">
+    <h3>ミュート中のユーザー:</h3>
+    <div id="mutedUsers"></div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 
